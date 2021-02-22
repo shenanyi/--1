@@ -1,0 +1,25 @@
+name: 123
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "30 */8 * * *"
+    watch:
+        types: [started]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.6'
+
+    - name: requirements
+      run: |
+        pip3 install PyExecJS
+    - name: Run
+      run: |
+        python3 postcode.py
