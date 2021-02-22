@@ -17,11 +17,11 @@ jobs:
       with:
         python-version: '3.9.2'
 
-    - name: requirements
+    - name: PyExecJS
       run: |
         pip install PyExecJS
         
-    - name: requirements
+    - name: requests
       run: |
         pip install requests
         
