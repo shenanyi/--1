@@ -15,16 +15,16 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
       with:
-        python-version: '3.6'
+        python-version: '3.9.2'
 
     - name: requirements
       run: |
-        pip3 install PyExecJS
+        pip install PyExecJS
         
     - name: requirements
       run: |
-        pip3 install requests
+        pip install requests
         
     - name: Run
       run: |
-        python3 postcode.py
+        python postcode.py
