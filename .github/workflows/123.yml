@@ -20,6 +20,11 @@ jobs:
     - name: requirements
       run: |
         pip3 install PyExecJS
+        
+    - name: requirements
+      run: |
+        pip3 install requests
+        
     - name: Run
       run: |
         python3 postcode.py
